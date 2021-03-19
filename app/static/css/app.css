@@ -1,3 +1,247 @@
+/*==================ALL PAGES=====================*/
 body {
     padding-top: 50px;
+    background-color:rgb(243,244,246);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,'Noto Sans', sans-serif;
+}
+
+.house-icon{
+    margin: 8px;
+}
+
+.navbar-custom{
+    background-color: rgb(20,183, 166);
+    border-color: rgb(20,183, 166);
+    color: #fff;
+}
+
+.navbar-brand{
+    margin-right: 3rem;
+    font-weight: 800;
+    font-size: larger;
+}
+
+.nav-link{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5) !important;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover{
+    color: #fff !important;
+}
+
+.navbar-toggler{
+    color: #fff;
+}
+
+
+footer{
+    background-color:cadetblue;
+    color: #fff;
+    margin-top: 50px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.page-heading{
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.card-blob{
+    border-radius: 15px;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    font-size: smaller;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+/*==================ADD PROPETY=====================*/
+.property-form{
+    background-color: #fff;
+    padding-left: 4%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    margin-top: 1rem;
+}
+
+.form-btn{
+    margin-top: 40px;
+}
+
+.label{
+    font-weight: bold;
+}
+
+.required{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.form-group{
+    margin-top: 2.5rem;
+}
+
+.form-btn:hover{
+    background-color: #4530cf;
+    box-shadow: 2px 4px  4px 1px #E2E8F0, -2px 0px 4px 1px #E2E8F0;
+}
+
+.property-price{
+    background-color: rgb(99,159, 242);
+}
+
+
+/*==================PROPERTIES PAGE=====================*/
+.preview-card{
+    margin: 1rem;
+    padding: 0;
+    min-width: 300px;
+}
+
+.preview-card-body{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-card-title{
+    padding: 0.6rem;
+    padding-bottom: 0;
+    font-size: medium;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.preview-card-text{
+    padding: 0.6rem;
+}
+
+.preview-card-location{
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 0;
+    font-size: smaller;
+    font-weight: 600;
+    color: lightslategrey;
+}
+
+.preview-card-price{
+    padding-top: 0;
+    margin-bottom: 1rem;
+}
+
+.preview-card-footer{
+    margin-top: auto;
+    padding: 0;
+    border: 0;
+}
+
+.preview-card-btn{
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: small;
+    font-weight: 700;
+    background-color: rgb(20,183, 166);
+    border-color: rgb(20,183, 166);
+}
+
+.preview-card-btn:hover{
+    background-color: rgb(9, 146, 132);
+    border-color: rgb(9, 146, 132);;
+}
+
+
+/*======================PROPERTY PAGE==================*/
+
+.property-card-container{
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.property-card{
+    padding: 0;
+    min-height: 400px;
+    max-width: 900px;
+}
+.property-card-row{
+    height: 100%;
+}
+
+/* .property-card-img-container{
+    padding-right: 0;
+} */
+
+.property-card-img{
+    height: 100%;
+    width: 100%;
+}
+
+.property-card-title{
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* .property-card-body-container{
+    padding-left: 1px;
+} */
+
+.property-card-body{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem 1.3rem 0.5rem;
+    height: 100%;
+}
+
+.property-card-price-type-container{
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.property-type{
+    background-color: rgb(247,193, 33);
+}
+
+.property-card-description{
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.property-card-rooms{
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.property-card-room{
+    margin-right: 1rem;
+}
+
+.property-card-location{
+    margin-top: 1.5rem;
+}
+
+.property-card-btn{
+    background-color: rgb(20,183, 166);
+    border-color: rgb(20,183, 166);
+}
+
+.property-card-btn:hover{
+    background-color: rgb(9, 146, 132);
+    border-color: rgb(9, 146, 132);;
+}
+
+.property-card-footer{
+    margin-top: auto;
+    /* margin-top: 1.5rem; */
+    padding: 0;
+    border: 0;
 }

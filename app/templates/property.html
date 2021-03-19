@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="row property-card-container">
+        {% if prop %}
+            <div class="card mb-3 property-card">
+                <div class="row g-0 property-card-row">
+                    <div class="col-md-5 property-card-img-container">
+                        <img class="property-card-img" src="{{url_for('get_image', filename=prop.photo)}}" alt="Card image cap">
+                    </div>
+
+                    <div class="col-md-7 property-card-body-container">
+                        <div class="card-body property-card-body">
+                            <h5 class="card-title property-card-title">{{prop.title}}</h5>
+                            <div class="property-card-price-type-container">
+                                <span class="property-price card-blob">${{prop.price}}</span>
+                                <span class="property-type card-blob">{{prop.type_}}</span>
+                            </div>
+
+                            <p class="card-text property-card-text property-card-description">{{ prop.description }}</p>
+
+                        
+                            <p class="card-text property-card-text property-card-rooms">
+                                <span class="property-card-room">
+                                        <i class="fas fa-bed"></i> {{prop.no_of_rooms}} Bedrooms
+                                </span>
+
+                                <span class="property-card-room">
+                                    <i class="fas fa-shower"></i> {{prop.no_of_bathrooms}} Bathrooms
+                                </span>
+                            </p>
+                                
+
+                            <p class="card-text property-card-text property-card-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{prop.location}}
+                            </p>
+
+
+                            <div class="card-footer property-card-footer"></div>
+                                <small>
+                                    <a class="btn btn-primary property-card-btn" href="{{url_for('property',propertyid=prop.id)}}">Email Realtor</a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {%endif%}
+    </div>
+{% endblock %}

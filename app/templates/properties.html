@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h1 class="page-heading">Properties</h1>
+
+    <div class="row">
+        {% if properties %}
+            {% for prop in properties %}
+                <div class="card col-lg-3 col-md-4 col-sm-5 col-9 preview-card">
+                    <img class="card-img-top" src="{{url_for('get_image', filename=prop.photo)}}" alt="Card image cap">
+                    <div class="card-body preview-card-body">
+                        <h5 class="card-title preview-card-title">{{prop.title}}</h5>
+
+                        <p class="card-text preview-card-text preview-card-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            {{prop.location}}
+                        </p>
+
+                        <div class="preview-card-text preview-card-price"><span class="property-price card-blob">${{prop.price}}</span></div>
+                       
+                        <div class="card-footer preview-card-footer">
+                            <small>
+                                <a class="btn btn-primary preview-card-btn" href="{{url_for('property',propertyid=prop.id)}}">View Property</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

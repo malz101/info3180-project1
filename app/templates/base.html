@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Flask Starter Template</title>
+    <title>INFO3180 - Project 1</title>
 
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/static/css/app.css">
+    <script src="https://kit.fontawesome.com/b6b3192443.js" crossorigin="anonymous" ></script>
     {% block css %} {% endblock%}
   </head>
   <body>
     <header>
         {% include "header.html" %}
     </header>
+    <div class="container">
+      {% include 'flash_messages.html' %}
+    </div>
     <main>
         <div class="container">
             {% block main %}{% endblock %}
@@ -31,6 +35,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/static/js/app.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     {% block js %} {% endblock%}
   </body>

@@ -1,8 +1,5 @@
 /* Add your Application JavaScript */
-console.log('this is some JavaScript code');
-
-function notify() {
-  alert('in here I will do something');
-}
-
+$(document).ready(function() {
+  $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+});
 // notify();

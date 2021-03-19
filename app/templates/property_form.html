@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h1 class="page-heading">Add New Property</h1>
+    
+    <div class="row">
+        <form class="property-form col-lg-9 col-sm-11" action="{{ url_for('add_property')}}" method="post" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{form.title.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                {{form.title(class="form-control")}}
+            </div>
+            
+            <div class="form-group">
+                {{form.description.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                {{form.description(class="form-control")}}
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    {{form.no_of_rooms.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                    {{form.no_of_rooms(class="form-control")}}
+                </div>
+                <div class="form-group col-sm-6">
+                    {{form.no_of_bathrooms.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                    {{form.no_of_bathrooms(class="form-control")}}
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    {{form.price.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                    {{form.price(class="form-control")}}
+                </div>
+        
+                <div class="form-group col-sm-6">
+                    {{form.type_.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                    {{form.type_(class="form-control form-select")}}
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+                    {{form.location .label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                    {{form.location (class="form-control")}}
+                </div>
+            </div>
+    
+    
+            <div class="form-group">
+                {{form.photo.label(class="label")}} <span class="required" data-toggle="tooltip" data-placement="right" title="Required">*</span>
+                
+                {{form.photo(class="form-control-file")}}
+            </div>
+    
+            <button type="submit" class="btn btn-primary form-btn">Add Property</button>
+        </form>
+
+    </div>
+    
+{% endblock %}
